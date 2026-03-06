@@ -12,7 +12,6 @@ A GitHub Action that automatically translates your `README.md` into multiple lan
 * **Multi-Language Support:** Generate READMEs for multiple languages in one run.
 * **Auto-Navigation:** Automatically inserts and maintains a standard language switcher menu at the top of your files (can be disabled). AI styles it automatically!
 * **Custom Styling:** You can provide a custom menu style parameter so the AI formats the language switcher exactly how you want.
-
 * **Token Tracking:** Outputs Gemini token usage statistics.
 
 ## 🛠 Usage
@@ -33,11 +32,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Gemini README Translator
+        id: translator
         uses: artryazanov/gemini-readme-translator@v1
         with:
           api_key: ${{ secrets.GEMINI_API_KEY }}
@@ -46,6 +47,12 @@ jobs:
           add_language_menu: 'true'
           menu_style: '> 🌐 **Languages:** [English](README.md) | [Русский](README.ru.md)'
 
+      - name: Print Translation Stats
+        run: |
+          echo "Process took ${{ steps.translator.outputs.duration_seconds }} seconds."
+          echo "Total tokens used: ${{ steps.translator.outputs.total_tokens_used }}"
+          echo "Input tokens: ${{ steps.translator.outputs.input_tokens_used }}"
+          echo "Output tokens: ${{ steps.translator.outputs.output_tokens_used }}"
 
 ```
 
@@ -62,6 +69,15 @@ jobs:
 | `commit_message` | No | `docs: auto-translate README via Gemini` | Text used for the git commit message. |
 | `model` | No | `gemini-3.1-pro-preview` | The Gemini model to use. |
 | `source_file` | No | `README.md` | The base file to translate. |
+
+## 📤 Outputs
+
+| Output | Description |
+| --- | --- |
+| `total_tokens_used` | Total number of tokens processed. |
+| `input_tokens_used` | Number of tokens in the input prompts. |
+| `output_tokens_used` | Number of tokens generated in the responses. |
+| `duration_seconds` | Total processing time in seconds. |
 
 ## 🔑 How to get a Google Gemini API Key
 

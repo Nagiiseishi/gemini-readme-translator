@@ -26,4 +26,6 @@ jobs:
       - name: Print Translation Stats
         run: |
           echo "Process took ${{ steps.translator.outputs.duration_seconds }} seconds."
+          echo "Input tokens used: ${{ steps.translator.outputs.input_tokens_used }}"
+          echo "Output tokens used: ${{ steps.translator.outputs.output_tokens_used }}"
           echo "Total tokens used: ${{ steps.translator.outputs.total_tokens_used }}"
