@@ -6,7 +6,7 @@
 [![codecov](https://codecov.io/gh/artryazanov/gemini-readme-translator/graph/badge.svg)](https://codecov.io/gh/artryazanov/gemini-readme-translator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-A GitHub Action that automatically translates your `README.md` into multiple languages using the Gemini API. It intelligently injects a cross-linked language navigation menu into all files and can either commit changes directly or create a Pull Request for review.
+A GitHub Action that automatically translates your `README.md` into multiple languages using the Gemini API. It intelligently injects a cross-linked language navigation menu into all files and automatically commits the changes.
 
 ## 🚀 Features
 * **Multi-Language Support:** Generate READMEs for multiple languages in one run.
@@ -77,7 +77,7 @@ To use this action, you need a free API key from Google AI Studio:
 
 ## 🔑 How to configure the Standard GitHub Token
 
-This action uses the built-in `GITHUB_TOKEN` to push commits or create Pull Requests. You **do not** need to create a Personal Access Token (PAT) manually, but you **must** ensure the default token has the correct permissions:
+This action uses the built-in `GITHUB_TOKEN` to push commits. You **do not** need to create a Personal Access Token (PAT) manually, but you **must** ensure the default token has the correct permissions:
 
 1. Go to your repository **Settings** -> **Actions** -> **General**.
 2. Scroll down to the **Workflow permissions** section.
