@@ -1,11 +1,6 @@
 name: Translate README
 
 on:
-  push:
-    paths:
-      - 'README.md'
-    branches:
-      - main
   workflow_dispatch: # Allows manual triggering
 
 jobs:
