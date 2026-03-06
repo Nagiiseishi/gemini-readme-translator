@@ -182,6 +182,13 @@ def test_main_with_output_dir(mock_client_class, mock_env, monkeypatch):
         r.usage_metadata.candidates_token_count = 20
         r.usage_metadata.total_token_count = 30
         r.text = "# FAKE TRANSLATION"
+        
+        # We assert that the translation prompt enforces relative links specifically
+        if "expert technical translator" in contents:
+            assert "English -> ../README.md" in contents.replace(os.sep, "/")
+            assert "ru -> README.ru.md" in contents.replace(os.sep, "/")
+            assert "es -> README.es.md" in contents.replace(os.sep, "/")
+            
         return r
         
     mock_client.models.generate_content.side_effect = fake_generate_content
