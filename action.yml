@@ -27,6 +27,14 @@ inputs:
     description: "Set to 'true' to create a Pull Request instead of committing directly"
     required: false
     default: "false"
+  commit_message:
+    description: "Commit message to use when changes are pushed"
+    required: false
+    default: "docs: auto-translate README via Gemini"
+  skip_commit:
+    description: "Set to 'true' to completely skip committing or creating a PR (useful for dry runs / testing)"
+    required: false
+    default: "false"
   model:
     description: "Gemini model to use"
     required: false
@@ -75,9 +83,11 @@ runs:
       run: python ${{ github.action_path }}/main.py
 
     - name: Commit or Create PR
+      if: inputs.skip_commit != 'true'
       shell: bash
       env:
         GITHUB_TOKEN: ${{ inputs.github_token }}
+        INPUT_COMMIT_MESSAGE: ${{ inputs.commit_message }}
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -92,7 +102,7 @@ runs:
         if [[ "${{ inputs.create_pr }}" == "true" ]]; then
           BRANCH_NAME="gemini-translation-${GITHUB_RUN_ID}"
           git checkout -b "$BRANCH_NAME"
-          git commit -m "docs: auto-translate README via Gemini"
+          git commit -m "${INPUT_COMMIT_MESSAGE}"
           git push -u origin "$BRANCH_NAME"
           
           gh pr create \
@@ -101,6 +111,6 @@ runs:
             --base "${{ github.ref_name }}" \
             --head "$BRANCH_NAME"
         else
-          git commit -m "docs: auto-translate README via Gemini"
+          git commit -m "${INPUT_COMMIT_MESSAGE}"
           git push origin "HEAD:${{ github.ref_name }}"
         fi

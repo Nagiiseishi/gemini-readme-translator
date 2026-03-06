@@ -46,8 +46,8 @@ jobs:
 
       - name: Create Test Input README
         run: |
-          echo "# Gemini Test Action" > README.md
-          echo "This is a quick test to verify the E2E pipeline for translation." >> README.md
+          echo "# Gemini Test Action" > TEST_README.md
+          echo "This is a quick test to verify the E2E pipeline for translation." >> TEST_README.md
 
       - name: Run E2E Test (Gemini README Translator)
         id: translator
@@ -55,27 +55,29 @@ jobs:
         with:
           api_key: ${{ secrets.GEMINI_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          source_file: "TEST_README.md"
           languages: 'ru, es'
           add_language_menu: 'true'
           create_pr: 'false'
+          skip_commit: 'true'
           model: 'gemini-3.1-pro-preview'
 
       - name: Verify Results
         run: |
           echo "Checking generated files..."
           
-          if [ ! -f "README.ru.md" ]; then
-            echo "::error::README.ru.md not found!"
+          if [ ! -f "TEST_README.ru.md" ]; then
+            echo "::error::TEST_README.ru.md not found!"
             exit 1
           fi
           
-          if [ ! -f "README.es.md" ]; then
-            echo "::error::README.es.md not found!"
+          if [ ! -f "TEST_README.es.md" ]; then
+            echo "::error::TEST_README.es.md not found!"
             exit 1
           fi
           
           echo "Files exist. Checking content..."
-          cat README.ru.md
+          cat TEST_README.ru.md
           
           echo "\nChecking GitHub output variables..."
           echo "Duration: ${{ steps.translator.outputs.duration_seconds }} s"
