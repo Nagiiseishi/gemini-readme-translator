@@ -10,7 +10,7 @@ A GitHub Action that automatically translates your `README.md` into multiple lan
 * **Multi-Language Support:** Generate READMEs for multiple languages in one run.
 * **Auto-Navigation:** Automatically inserts and maintains a standard language switcher menu at the top of your files (can be disabled). AI styles it automatically!
 * **Custom Styling:** You can provide a custom menu style parameter so the AI formats the language switcher exactly how you want.
-* **Pull Request Mode:** Review translations safely via Merge/Pull Requests before merging into your main branch.
+
 * **Token Tracking:** Outputs Gemini token usage statistics.
 
 ## 🛠 Usage
@@ -44,7 +44,7 @@ jobs:
           languages: 'ru, zh-CN, es'
           add_language_menu: 'true'
           menu_style: '> 🌐 **Languages:** [English](README.md) | [Русский](README.ru.md)'
-          create_pr: 'true'
+
 
 ```
 
@@ -58,7 +58,7 @@ jobs:
 | `output_dir` | No | | Directory to save translated files. Defaults to source file's directory. |
 | `add_language_menu` | No | `true` | Set to `false` to disable auto-generation of the language menu. |
 | `menu_style` | No | `> 🌐 **Languages:** [English](README.md) \| [Русский](README.ru.md)` | The reference style AI uses when generating a new language menu. |
-| `create_pr` | No | `false` | If `true`, creates a PR instead of a direct commit. |
+
 | `commit_message` | No | `docs: auto-translate README via Gemini` | Text used for the git commit message. |
 | `model` | No | `gemini-3.1-pro-preview` | The Gemini model to use. |
 | `source_file` | No | `README.md` | The base file to translate. |
@@ -82,9 +82,8 @@ This action uses the built-in `GITHUB_TOKEN` to push commits or create Pull Requ
 1. Go to your repository **Settings** -> **Actions** -> **General**.
 2. Scroll down to the **Workflow permissions** section.
 3. Select **Read and write permissions**.
-4. Check the box for *Allow GitHub Actions to create and approve pull requests* (required if you use `create_pr: 'true'`).
-5. Click **Save**.
-6. In your workflow YAML, simply pass `${{ secrets.GITHUB_TOKEN }}` to the `github_token` input (as shown in the usage example).
+4. Click **Save**.
+5. In your workflow YAML, simply pass `${{ secrets.GITHUB_TOKEN }}` to the `github_token` input (as shown in the usage example).
 
 ## 📄 License
 

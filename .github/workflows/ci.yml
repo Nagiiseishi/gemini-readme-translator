@@ -58,7 +58,6 @@ jobs:
           source_file: "TEST_README.md"
           languages: 'ru, es'
           add_language_menu: 'true'
-          create_pr: 'false'
           skip_commit: 'true'
           model: 'gemini-3.1-pro-preview'
 
