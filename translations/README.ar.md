@@ -1,4 +1,4 @@
-> 🌐 **Languages:** [English](README.md) | [English (en)](translations/README.en.md) | [Русский](translations/README.ru.md) | [ไทย](translations/README.th.md) | [简体中文](translations/README.zh-CN.md) | [繁體中文](translations/README.zh-TW.md) | [हिन्दी](translations/README.hi.md) | [Español](translations/README.es.md) | [Français](translations/README.fr.md) | [العربية](translations/README.ar.md) | [বাংলা](translations/README.bn.md) | [Português](translations/README.pt.md) | [اردو](translations/README.ur.md) | [Bahasa Indonesia](translations/README.id.md) | [Deutsch](translations/README.de.md) | [日本語](translations/README.ja.md) | [मराठी](translations/README.mr.md) | [తెలుగు](translations/README.te.md) | [Türkçe](translations/README.tr.md) | [தமிழ்](translations/README.ta.md) | [Tiếng Việt](translations/README.vi.md) | [한국어](translations/README.ko.md) | [Kiswahili](translations/README.sw.md) | [Italiano](translations/README.it.md) | [ગુજરાતી](translations/README.gu.md) | [فارسی](translations/README.fa.md) | [ಕನ್ನಡ](translations/README.kn.md) | [Polski](translations/README.pl.md) | [മലയാളം](translations/README.ml.md) | [Українська](translations/README.uk.md) | [Română](translations/README.ro.md) | [Nederlands](translations/README.nl.md) | [Ελληνικά](translations/README.el.md) | [Magyar](translations/README.hu.md) | [Svenska](translations/README.sv.md) | [Čeština](translations/README.cs.md) | [Српски](translations/README.sr.md) | [עברית](translations/README.he.md) | [Български](translations/README.bg.md) | [Dansk](translations/README.da.md) | [Suomi](translations/README.fi.md) | [Norsk](translations/README.no.md) | [Slovenčina](translations/README.sk.md) | [Hrvatski](translations/README.hr.md) | [Lietuvių](translations/README.lt.md) | [Slovenščina](translations/README.sl.md) | [Latviešu](translations/README.lv.md) | [Eesti](translations/README.et.md)
+> 🌐 **Languages:** [English](../README.md) | [Русский](README.ru.md) | [ไทย](README.th.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [हिन्दी](README.hi.md) | [Español](README.es.md) | [Français](README.fr.md) | [العربية](README.ar.md) | [বাংলা](README.bn.md) | [Português](README.pt.md) | [اردو](README.ur.md) | [Bahasa Indonesia](README.id.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [मराठी](README.mr.md) | [తెలుగు](README.te.md) | [Türkçe](README.tr.md) | [தமிழ்](README.ta.md) | [Tiếng Việt](README.vi.md) | [한국어](README.ko.md) | [Kiswahili](README.sw.md) | [Italiano](README.it.md) | [ગુજરાતી](README.gu.md) | [فارسی](README.fa.md) | [ಕನ್ನಡ](README.kn.md) | [Polski](README.pl.md) | [മലയാളം](README.ml.md) | [Українська](README.uk.md) | [Română](README.ro.md) | [Nederlands](README.nl.md) | [Ελληνικά](README.el.md) | [Magyar](README.hu.md) | [Svenska](README.sv.md) | [Čeština](README.cs.md) | [Српски](README.sr.md) | [עברית](README.he.md) | [Български](README.bg.md) | [Dansk](README.da.md) | [Suomi](README.fi.md) | [Norsk](README.no.md) | [Slovenčina](README.sk.md) | [Hrvatski](README.hr.md) | [Lietuvių](README.lt.md) | [Slovenščina](README.sl.md) | [Latviešu](README.lv.md) | [Eesti](README.et.md)
 
 # مترجم Gemini لملفات README
 
@@ -6,17 +6,17 @@
 [![codecov](https://codecov.io/gh/artryazanov/gemini-readme-translator/graph/badge.svg)](https://codecov.io/gh/artryazanov/gemini-readme-translator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-إجراء GitHub (GitHub Action) يقوم تلقائيًا بترجمة ملف `README.md` الخاص بك إلى لغات متعددة باستخدام واجهة برمجة تطبيقات Gemini (Gemini API). يقوم بذكاء بإدراج قائمة تنقل للغات مرتبطة ببعضها البعض في جميع الملفات ويمكنه إما إيداع التغييرات (commit) مباشرة أو إنشاء طلب سحب (Pull Request) للمراجعة.
+إجراء GitHub (GitHub Action) يترجم ملف `README.md` تلقائيًا إلى لغات متعددة باستخدام واجهة برمجة تطبيقات Gemini (Gemini API). يقوم بذكاء بإدراج قائمة تنقل مترابطة للغات في جميع الملفات ويقوم بتنفيذ (commit) التغييرات تلقائيًا.
 
 ## 🚀 الميزات
-* **دعم لغات متعددة:** إنشاء ملفات README بلغات متعددة في عملية تشغيل واحدة.
-* **التنقل التلقائي:** يقوم تلقائيًا بإدراج قائمة قياسية للتبديل بين اللغات في أعلى ملفاتك ويحافظ عليها (يمكن تعطيلها). يقوم الذكاء الاصطناعي بتنسيقها تلقائيًا!
-* **تنسيق مخصص:** يمكنك توفير معامل نمط قائمة مخصص بحيث يقوم الذكاء الاصطناعي بتنسيق مبدل اللغة بالطريقة التي تريدها بالضبط.
-* **تتبع الرموز (Tokens):** يخرج إحصائيات استخدام رموز Gemini.
+* **دعم لغات متعددة:** إنشاء ملفات README بلغات متعددة في تشغيل واحد.
+* **التنقل التلقائي:** يقوم بإدراج قائمة قياسية لتبديل اللغة تلقائيًا ويحافظ عليها في أعلى ملفاتك (يمكن تعطيلها). يقوم الذكاء الاصطناعي بتنسيقها تلقائيًا!
+* **تنسيق مخصص:** يمكنك توفير معلمة نمط مخصصة للقائمة بحيث يقوم الذكاء الاصطناعي بتنسيق مبدل اللغة تمامًا كما تريد.
+* **تتبع الرموز (Tokens):** يعرض إحصائيات استخدام الرموز في Gemini.
 
 ## 🛠 الاستخدام
 
-قم بإنشاء ملف سير عمل (على سبيل المثال، `.github/workflows/translate.yml`):
+أنشئ ملف سير عمل (على سبيل المثال، `.github/workflows/translate.yml`):
 
 ```yaml
 name: Auto Translate README
@@ -32,11 +32,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Gemini README Translator
+        id: translator
         uses: artryazanov/gemini-readme-translator@v1
         with:
           api_key: ${{ secrets.GEMINI_API_KEY }}
@@ -45,44 +47,60 @@ jobs:
           add_language_menu: 'true'
           menu_style: '> 🌐 **Languages:** [English](README.md) | [Русский](README.ru.md)'
 
+      - name: Print Translation Stats
+        run: |
+          echo "Process took ${{ steps.translator.outputs.duration_seconds }} seconds."
+          echo "Total tokens used: ${{ steps.translator.outputs.total_tokens_used }}"
+          echo "Input tokens: ${{ steps.translator.outputs.input_tokens_used }}"
+          echo "Output tokens: ${{ steps.translator.outputs.output_tokens_used }}"
+
 ```
 
 ## 📥 المدخلات
 
-| المدخل (Input) | مطلوب | الافتراضي | الوصف |
+| المدخل | مطلوب | الافتراضي | الوصف |
 | --- | --- | --- | --- |
-| `api_key` | نعم |  | مفتاح واجهة برمجة تطبيقات Google Gemini الخاص بك. |
+| `api_key` | نعم |  | مفتاح Google Gemini API الخاص بك. |
 | `github_token` | نعم |  | رمز GitHub القياسي (`${{ secrets.GITHUB_TOKEN }}`). |
 | `languages` | نعم |  | اللغات المستهدفة مفصولة بفواصل (مثل `ru, es`). |
 | `output_dir` | لا | | الدليل لحفظ الملفات المترجمة. الافتراضي هو دليل الملف المصدر. |
-| `add_language_menu` | لا | `true` | اضبط على `false` لتعطيل الإنشاء التلقائي لقائمة اللغات. |
+| `add_language_menu` | لا | `true` | عيّن إلى `false` لتعطيل الإنشاء التلقائي لقائمة اللغات. |
 | `menu_style` | لا | `> 🌐 **Languages:** [English](README.md) \| [Русский](README.ru.md)` | النمط المرجعي الذي يستخدمه الذكاء الاصطناعي عند إنشاء قائمة لغات جديدة. |
-| `commit_message` | لا | `docs: auto-translate README via Gemini` | النص المستخدم لرسالة إيداع (commit) git. |
+| `commit_message` | لا | `docs: auto-translate README via Gemini` | النص المستخدم لرسالة التنفيذ (commit) في git. |
 | `model` | لا | `gemini-3.1-pro-preview` | نموذج Gemini المراد استخدامه. |
 | `source_file` | لا | `README.md` | الملف الأساسي المراد ترجمته. |
 
-## 🔑 كيفية الحصول على مفتاح واجهة برمجة تطبيقات Google Gemini
+## 📤 المخرجات
 
-لاستخدام هذا الإجراء، تحتاج إلى مفتاح واجهة برمجة تطبيقات مجاني من Google AI Studio:
+| المخرج | الوصف |
+| --- | --- |
+| `total_tokens_used` | إجمالي عدد الرموز (tokens) التي تمت معالجتها. |
+| `input_tokens_used` | عدد الرموز في مطالبات الإدخال. |
+| `output_tokens_used` | عدد الرموز الناتجة في الردود. |
+| `duration_seconds` | إجمالي وقت المعالجة بالثواني. |
+
+## 🔑 كيفية الحصول على مفتاح Google Gemini API
+
+لاستخدام هذا الإجراء، تحتاج إلى مفتاح API مجاني من Google AI Studio:
 
 1. اذهب إلى [Google AI Studio](https://aistudio.google.com/).
-2. سجل الدخول باستخدام حساب Google الخاص بك.
-3. في قائمة التنقل اليسرى، انقر على **Get API key** (الحصول على مفتاح واجهة برمجة التطبيقات).
-4. انقر على زر **Create API key** (إنشاء مفتاح واجهة برمجة التطبيقات).
-5. انسخ المفتاح المُنشأ.
-6. اذهب إلى مستودع GitHub الخاص بك -> **Settings** (الإعدادات) -> **Secrets and variables** (الأسرار والمتغيرات) -> **Actions** (الإجراءات).
-7. انقر على **New repository secret** (سر مستودع جديد)، وقم بتسميته `GEMINI_API_KEY`، ثم الصق المفتاح الخاص بك في حقل "Secret" (السر)، واحفظه.
+2. قم بتسجيل الدخول باستخدام حساب Google الخاص بك.
+3. في قائمة التنقل اليسرى، انقر على **Get API key**.
+4. انقر على زر **Create API key**.
+5. انسخ المفتاح الذي تم إنشاؤه.
+6. اذهب إلى مستودع GitHub الخاص بك -> **Settings** -> **Secrets and variables** -> **Actions**.
+7. انقر على **New repository secret**، وقم بتسميته `GEMINI_API_KEY`، ثم الصق المفتاح في حقل Secret، واحفظ.
 
 ## 🔑 كيفية تكوين رمز GitHub القياسي (Standard GitHub Token)
 
-يستخدم هذا الإجراء الرمز المدمج `GITHUB_TOKEN` لدفع الإيداعات (commits) أو إنشاء طلبات سحب (Pull Requests). أنت **لست بحاجة** إلى إنشاء رمز وصول شخصي (PAT) يدويًا، ولكن **يجب عليك** التأكد من أن الرمز الافتراضي يمتلك الأذونات الصحيحة:
+يستخدم هذا الإجراء الرمز المدمج `GITHUB_TOKEN` لدفع (push) التنفيذات (commits). أنت **لست** بحاجة إلى إنشاء رمز وصول شخصي (PAT) يدويًا، ولكن **يجب** عليك التأكد من أن الرمز الافتراضي يمتلك الأذونات الصحيحة:
 
-1. اذهب إلى **Settings** (الإعدادات) في مستودعك -> **Actions** (الإجراءات) -> **General** (عام).
-2. قم بالتمرير لأسفل إلى قسم **Workflow permissions** (أذونات سير العمل).
-3. حدد **Read and write permissions** (أذونات القراءة والكتابة).
-4. انقر على **Save** (حفظ).
-5. في ملف سير العمل YAML، ما عليك سوى تمرير `${{ secrets.GITHUB_TOKEN }}` إلى المدخل `github_token` (كما هو موضح في مثال الاستخدام).
+1. اذهب إلى مستودعك **Settings** -> **Actions** -> **General**.
+2. قم بالتمرير لأسفل إلى قسم **Workflow permissions**.
+3. حدد **Read and write permissions**.
+4. انقر على **Save**.
+5. في ملف YAML الخاص بسير العمل، قم ببساطة بتمرير `${{ secrets.GITHUB_TOKEN }}` إلى المدخل `github_token` (كما هو موضح في مثال الاستخدام).
 
 ## 📄 الترخيص
 
-هذا المشروع مرخص بموجب ترخيص MIT - راجع ملف [الترخيص](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE) (LICENSE) للحصول على التفاصيل.
+هذا المشروع مرخص بموجب ترخيص MIT - راجع ملف [LICENSE](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE) للحصول على التفاصيل.

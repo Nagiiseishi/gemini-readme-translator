@@ -1,22 +1,22 @@
-> 🌐 **Languages:** [English](README.md) | [English (en)](translations/README.en.md) | [Русский](translations/README.ru.md) | [ไทย](translations/README.th.md) | [简体中文](translations/README.zh-CN.md) | [繁體中文](translations/README.zh-TW.md) | [हिन्दी](translations/README.hi.md) | [Español](translations/README.es.md) | [Français](translations/README.fr.md) | [العربية](translations/README.ar.md) | [বাংলা](translations/README.bn.md) | [Português](translations/README.pt.md) | [اردو](translations/README.ur.md) | [Bahasa Indonesia](translations/README.id.md) | [Deutsch](translations/README.de.md) | [日本語](translations/README.ja.md) | [मराठी](translations/README.mr.md) | [తెలుగు](translations/README.te.md) | [Türkçe](translations/README.tr.md) | [தமிழ்](translations/README.ta.md) | [Tiếng Việt](translations/README.vi.md) | [한국어](translations/README.ko.md) | [Kiswahili](translations/README.sw.md) | [Italiano](translations/README.it.md) | [ગુજરાતી](translations/README.gu.md) | [فارسی](translations/README.fa.md) | [ಕನ್ನಡ](translations/README.kn.md) | [Polski](translations/README.pl.md) | [മലയാളം](translations/README.ml.md) | [Українська](translations/README.uk.md) | [Română](translations/README.ro.md) | [Nederlands](translations/README.nl.md) | [Ελληνικά](translations/README.el.md) | [Magyar](translations/README.hu.md) | [Svenska](translations/README.sv.md) | [Čeština](translations/README.cs.md) | [Српски](translations/README.sr.md) | [עברית](translations/README.he.md) | [Български](translations/README.bg.md) | [Dansk](translations/README.da.md) | [Suomi](translations/README.fi.md) | [Norsk](translations/README.no.md) | [Slovenčina](translations/README.sk.md) | [Hrvatski](translations/README.hr.md) | [Lietuvių](translations/README.lt.md) | [Slovenščina](translations/README.sl.md) | [Latviešu](translations/README.lv.md) | [Eesti](translations/README.et.md)
+> 🌐 **Languages:** [English](../README.md) | [Русский](README.ru.md) | [ไทย](README.th.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [हिन्दी](README.hi.md) | [Español](README.es.md) | [Français](README.fr.md) | [العربية](README.ar.md) | [বাংলা](README.bn.md) | [Português](README.pt.md) | [اردو](README.ur.md) | [Bahasa Indonesia](README.id.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [मराठी](README.mr.md) | [తెలుగు](README.te.md) | [Türkçe](README.tr.md) | [தமிழ்](README.ta.md) | [Tiếng Việt](README.vi.md) | [한국어](README.ko.md) | [Kiswahili](README.sw.md) | [Italiano](README.it.md) | [ગુજરાતી](README.gu.md) | [فارسی](README.fa.md) | [ಕನ್ನಡ](README.kn.md) | [Polski](README.pl.md) | [മലയാളം](README.ml.md) | [Українська](README.uk.md) | [Română](README.ro.md) | [Nederlands](README.nl.md) | [Ελληνικά](README.el.md) | [Magyar](README.hu.md) | [Svenska](README.sv.md) | [Čeština](README.cs.md) | [Српски](README.sr.md) | [עברית](README.he.md) | [Български](README.bg.md) | [Dansk](README.da.md) | [Suomi](README.fi.md) | [Norsk](README.no.md) | [Slovenčina](README.sk.md) | [Hrvatski](README.hr.md) | [Lietuvių](README.lt.md) | [Slovenščina](README.sl.md) | [Latviešu](README.lv.md) | [Eesti](README.et.md)
 
-# Gemini README Translator
+# Traduttore di README con Gemini
 
 [![CI Pipeline](https://github.com/artryazanov/gemini-readme-translator/actions/workflows/ci.yml/badge.svg)](https://github.com/artryazanov/gemini-readme-translator/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/artryazanov/gemini-readme-translator/graph/badge.svg)](https://codecov.io/gh/artryazanov/gemini-readme-translator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Una GitHub Action che traduce automaticamente il tuo `README.md` in più lingue utilizzando l'API di Gemini. Inserisce in modo intelligente un menu di navigazione delle lingue con collegamenti incrociati in tutti i file e può eseguire direttamente il commit delle modifiche o creare una Pull Request per la revisione.
+Una GitHub Action che traduce automaticamente il tuo `README.md` in più lingue utilizzando l'API di Gemini. Inserisce in modo intelligente un menu di navigazione per le lingue con collegamenti incrociati in tutti i file e committa automaticamente le modifiche.
 
-## 🚀 Funzionalità
-* **Supporto multilingua:** Genera README per più lingue in una singola esecuzione.
-* **Navigazione automatica:** Inserisce e mantiene automaticamente un menu standard per il cambio lingua in cima ai tuoi file (può essere disabilitato). L'IA lo formatta automaticamente!
-* **Stile personalizzato:** Puoi fornire un parametro per lo stile del menu in modo che l'IA formatti il selettore di lingua esattamente come desideri.
-* **Tracciamento dei token:** Restituisce le statistiche sull'utilizzo dei token di Gemini.
+## 🚀 Caratteristiche
+* **Supporto Multilingua:** Genera i README per diverse lingue in un'unica esecuzione.
+* **Navigazione Automatica:** Inserisce e mantiene automaticamente un menu di selezione lingua standard in cima ai tuoi file (può essere disabilitato). L'IA lo formatta automaticamente!
+* **Stile Personalizzato:** Puoi fornire un parametro per lo stile personalizzato del menu, in modo che l'IA formatti il selettore della lingua esattamente come desideri.
+* **Tracciamento Token:** Restituisce in output le statistiche di utilizzo dei token di Gemini.
 
 ## 🛠 Utilizzo
 
-Crea un file di workflow (es. `.github/workflows/translate.yml`):
+Crea un file di workflow (es., `.github/workflows/translate.yml`):
 
 ```yaml
 name: Auto Translate README
@@ -32,11 +32,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Gemini README Translator
+        id: translator
         uses: artryazanov/gemini-readme-translator@v1
         with:
           api_key: ${{ secrets.GEMINI_API_KEY }}
@@ -45,6 +47,12 @@ jobs:
           add_language_menu: 'true'
           menu_style: '> 🌐 **Languages:** [English](README.md) | [Русский](README.ru.md)'
 
+      - name: Print Translation Stats
+        run: |
+          echo "Process took ${{ steps.translator.outputs.duration_seconds }} seconds."
+          echo "Total tokens used: ${{ steps.translator.outputs.total_tokens_used }}"
+          echo "Input tokens: ${{ steps.translator.outputs.input_tokens_used }}"
+          echo "Output tokens: ${{ steps.translator.outputs.output_tokens_used }}"
 
 ```
 
@@ -52,17 +60,26 @@ jobs:
 
 | Input | Obbligatorio | Predefinito | Descrizione |
 | --- | --- | --- | --- |
-| `api_key` | Sì |  | La tua chiave API di Google Gemini. |
-| `github_token` | Sì |  | Token standard di GitHub (`${{ secrets.GITHUB_TOKEN }}`). |
+| `api_key` | Sì |  | La tua Chiave API di Google Gemini. |
+| `github_token` | Sì |  | Il token standard di GitHub (`${{ secrets.GITHUB_TOKEN }}`). |
 | `languages` | Sì |  | Lingue di destinazione separate da virgola (es. `ru, es`). |
 | `output_dir` | No | | Directory in cui salvare i file tradotti. Per impostazione predefinita è la directory del file di origine. |
 | `add_language_menu` | No | `true` | Imposta su `false` per disabilitare la generazione automatica del menu delle lingue. |
-| `menu_style` | No | `> 🌐 **Languages:** [English](README.md) \| [Русский](README.ru.md)` | Lo stile di riferimento che l'IA utilizza quando genera un nuovo menu delle lingue. |
-| `commit_message` | No | `docs: auto-translate README via Gemini` | Testo utilizzato per il messaggio di commit git. |
+| `menu_style` | No | `> 🌐 **Languages:** [English](README.md) \| [Русский](README.ru.md)` | Lo stile di riferimento che l'IA usa durante la generazione di un nuovo menu delle lingue. |
+| `commit_message` | No | `docs: auto-translate README via Gemini` | Testo usato per il messaggio di commit git. |
 | `model` | No | `gemini-3.1-pro-preview` | Il modello Gemini da utilizzare. |
 | `source_file` | No | `README.md` | Il file di base da tradurre. |
 
-## 🔑 Come ottenere una chiave API di Google Gemini
+## 📤 Output
+
+| Output | Descrizione |
+| --- | --- |
+| `total_tokens_used` | Numero totale di token elaborati. |
+| `input_tokens_used` | Numero di token nei prompt di input. |
+| `output_tokens_used` | Numero di token generati nelle risposte. |
+| `duration_seconds` | Tempo totale di elaborazione in secondi. |
+
+## 🔑 Come ottenere una Chiave API per Google Gemini
 
 Per utilizzare questa action, hai bisogno di una chiave API gratuita da Google AI Studio:
 
@@ -74,16 +91,16 @@ Per utilizzare questa action, hai bisogno di una chiave API gratuita da Google A
 6. Vai al tuo repository GitHub -> **Settings** -> **Secrets and variables** -> **Actions**.
 7. Fai clic su **New repository secret**, chiamalo `GEMINI_API_KEY`, incolla la tua chiave nel campo Secret e salva.
 
-## 🔑 Come configurare il token standard di GitHub
+## 🔑 Come configurare il Token Standard di GitHub
 
-Questa action utilizza il `GITHUB_TOKEN` integrato per inviare commit o creare Pull Request. **Non** è necessario creare manualmente un Personal Access Token (PAT), ma **devi** assicurarti che il token predefinito abbia i permessi corretti:
+Questa action utilizza il `GITHUB_TOKEN` integrato per inviare i commit. **Non è necessario** creare manualmente un Personal Access Token (PAT), ma **devi** assicurarti che il token predefinito abbia i permessi corretti:
 
-1. Vai nel tuo repository su **Settings** -> **Actions** -> **General**.
-2. Scorri in basso fino alla sezione **Workflow permissions**.
+1. Vai in **Settings** -> **Actions** -> **General** nel tuo repository.
+2. Scorri verso il basso fino alla sezione **Workflow permissions**.
 3. Seleziona **Read and write permissions**.
 4. Fai clic su **Save**.
-5. Nel tuo YAML di workflow, passa semplicemente `${{ secrets.GITHUB_TOKEN }}` all'input `github_token` (come mostrato nell'esempio di utilizzo).
+5. Nel tuo workflow YAML, passa semplicemente `${{ secrets.GITHUB_TOKEN }}` all'input `github_token` (come mostrato nell'esempio di utilizzo).
 
 ## 📄 Licenza
 
-Questo progetto è concesso in licenza ai sensi della Licenza MIT: vedi il file [LICENSE](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE) per i dettagli.
+Questo progetto è concesso sotto licenza MIT - vedi il file [LICENSE](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE) per i dettagli.

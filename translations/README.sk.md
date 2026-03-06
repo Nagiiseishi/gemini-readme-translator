@@ -1,17 +1,17 @@
-> 🌐 **Languages:** [English](README.md) | [English (en)](translations/README.en.md) | [Русский](translations/README.ru.md) | [ไทย](translations/README.th.md) | [简体中文](translations/README.zh-CN.md) | [繁體中文](translations/README.zh-TW.md) | [हिन्दी](translations/README.hi.md) | [Español](translations/README.es.md) | [Français](translations/README.fr.md) | [العربية](translations/README.ar.md) | [বাংলা](translations/README.bn.md) | [Português](translations/README.pt.md) | [اردو](translations/README.ur.md) | [Bahasa Indonesia](translations/README.id.md) | [Deutsch](translations/README.de.md) | [日本語](translations/README.ja.md) | [मराठी](translations/README.mr.md) | [తెలుగు](translations/README.te.md) | [Türkçe](translations/README.tr.md) | [தமிழ்](translations/README.ta.md) | [Tiếng Việt](translations/README.vi.md) | [한국어](translations/README.ko.md) | [Kiswahili](translations/README.sw.md) | [Italiano](translations/README.it.md) | [ગુજરાતી](translations/README.gu.md) | [فارسی](translations/README.fa.md) | [ಕನ್ನಡ](translations/README.kn.md) | [Polski](translations/README.pl.md) | [മലയാളം](translations/README.ml.md) | [Українська](translations/README.uk.md) | [Română](translations/README.ro.md) | [Nederlands](translations/README.nl.md) | [Ελληνικά](translations/README.el.md) | [Magyar](translations/README.hu.md) | [Svenska](translations/README.sv.md) | [Čeština](translations/README.cs.md) | [Српски](translations/README.sr.md) | [עברית](translations/README.he.md) | [Български](translations/README.bg.md) | [Dansk](translations/README.da.md) | [Suomi](translations/README.fi.md) | [Norsk](translations/README.no.md) | [Slovenčina](translations/README.sk.md) | [Hrvatski](translations/README.hr.md) | [Lietuvių](translations/README.lt.md) | [Slovenščina](translations/README.sl.md) | [Latviešu](translations/README.lv.md) | [Eesti](translations/README.et.md)
+> 🌐 **Jazyky:** [English](../README.md) | [Русский](README.ru.md) | [ไทย](README.th.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [हिन्दी](README.hi.md) | [Español](README.es.md) | [Français](README.fr.md) | [العربية](README.ar.md) | [বাংলা](README.bn.md) | [Português](README.pt.md) | [اردو](README.ur.md) | [Bahasa Indonesia](README.id.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [मराठी](README.mr.md) | [తెలుగు](README.te.md) | [Türkçe](README.tr.md) | [தமிழ்](README.ta.md) | [Tiếng Việt](README.vi.md) | [한국어](README.ko.md) | [Kiswahili](README.sw.md) | [Italiano](README.it.md) | [ગુજરાતી](README.gu.md) | [فارسی](README.fa.md) | [ಕನ್ನಡ](README.kn.md) | [Polski](README.pl.md) | [മലയാളം](README.ml.md) | [Українська](README.uk.md) | [Română](README.ro.md) | [Nederlands](README.nl.md) | [Ελληνικά](README.el.md) | [Magyar](README.hu.md) | [Svenska](README.sv.md) | [Čeština](README.cs.md) | [Српски](README.sr.md) | [עברית](README.he.md) | [Български](README.bg.md) | [Dansk](README.da.md) | [Suomi](README.fi.md) | [Norsk](README.no.md) | [Slovenčina](README.sk.md) | [Hrvatski](README.hr.md) | [Lietuvių](README.lt.md) | [Slovenščina](README.sl.md) | [Latviešu](README.lv.md) | [Eesti](README.et.md)
 
-# Prekladač Gemini README
+# Gemini README Translator
 
 [![CI Pipeline](https://github.com/artryazanov/gemini-readme-translator/actions/workflows/ci.yml/badge.svg)](https://github.com/artryazanov/gemini-readme-translator/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/artryazanov/gemini-readme-translator/graph/badge.svg)](https://codecov.io/gh/artryazanov/gemini-readme-translator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-GitHub akcia, ktorá automaticky prekladá váš súbor `README.md` do viacerých jazykov pomocou Gemini API. Inteligentne vkladá prepojené jazykové navigačné menu do všetkých súborov a dokáže zmeny buď priamo commitnúť, alebo vytvoriť Pull Request na revíziu.
+GitHub Action, ktorá automaticky preloží váš súbor `README.md` do viacerých jazykov pomocou Gemini API. Inteligentne vkladá prepojené navigačné menu jazykov do všetkých súborov a automaticky vytvorí commit so zmenami.
 
 ## 🚀 Funkcie
 * **Podpora viacerých jazykov:** Generovanie súborov README pre viacero jazykov v jednom behu.
-* **Automatická navigácia:** Automaticky vkladá a spravuje štandardné menu na prepínanie jazykov na vrchu vašich súborov (dá sa zakázať). AI ho štýluje automaticky!
-* **Vlastné štýlovanie:** Môžete zadať parameter pre vlastný štýl menu, takže AI naformátuje prepínač jazykov presne tak, ako chcete.
+* **Automatická navigácia:** Automaticky vkladá a spravuje štandardné menu na prepínanie jazykov v hornej časti vašich súborov (možno deaktivovať). AI ho automaticky naformátuje!
+* **Vlastné štýlovanie:** Môžete zadať parameter pre vlastný štýl menu, aby AI naformátovala prepínač jazykov presne podľa vašich predstáv.
 * **Sledovanie tokenov:** Zobrazuje štatistiky využitia tokenov Gemini.
 
 ## 🛠 Použitie
@@ -32,11 +32,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Gemini README Translator
+        id: translator
         uses: artryazanov/gemini-readme-translator@v1
         with:
           api_key: ${{ secrets.GEMINI_API_KEY }}
@@ -44,6 +46,13 @@ jobs:
           languages: 'ru, zh-CN, es'
           add_language_menu: 'true'
           menu_style: '> 🌐 **Languages:** [English](README.md) | [Русский](README.ru.md)'
+
+      - name: Print Translation Stats
+        run: |
+          echo "Process took ${{ steps.translator.outputs.duration_seconds }} seconds."
+          echo "Total tokens used: ${{ steps.translator.outputs.total_tokens_used }}"
+          echo "Input tokens: ${{ steps.translator.outputs.input_tokens_used }}"
+          echo "Output tokens: ${{ steps.translator.outputs.output_tokens_used }}"
 
 ```
 
@@ -54,35 +63,44 @@ jobs:
 | `api_key` | Áno |  | Váš kľúč Google Gemini API. |
 | `github_token` | Áno |  | Štandardný GitHub token (`${{ secrets.GITHUB_TOKEN }}`). |
 | `languages` | Áno |  | Cieľové jazyky oddelené čiarkou (napr. `ru, es`). |
-| `output_dir` | Nie | | Adresár na uloženie preložených súborov. Predvolený je adresár zdrojového súboru. |
-| `add_language_menu` | Nie | `true` | Nastavte na `false` pre zakázanie automatického generovania jazykového menu. |
+| `output_dir` | Nie | | Adresár na uloženie preložených súborov. Predvolene je to adresár zdrojového súboru. |
+| `add_language_menu` | Nie | `true` | Nastavte na `false` pre vypnutie automatického generovania jazykového menu. |
 | `menu_style` | Nie | `> 🌐 **Languages:** [English](README.md) \| [Русский](README.ru.md)` | Referenčný štýl, ktorý AI používa pri generovaní nového jazykového menu. |
 | `commit_message` | Nie | `docs: auto-translate README via Gemini` | Text použitý pre správu git commitu. |
-| `model` | Nie | `gemini-3.1-pro-preview` | Gemini model, ktorý sa má použiť. |
+| `model` | Nie | `gemini-3.1-pro-preview` | Model Gemini, ktorý sa má použiť. |
 | `source_file` | Nie | `README.md` | Základný súbor na preklad. |
+
+## 📤 Výstupy
+
+| Výstup | Popis |
+| --- | --- |
+| `total_tokens_used` | Celkový počet spracovaných tokenov. |
+| `input_tokens_used` | Počet tokenov vo vstupných promtoch. |
+| `output_tokens_used` | Počet vygenerovaných tokenov v odpovediach. |
+| `duration_seconds` | Celkový čas spracovania v sekundách. |
 
 ## 🔑 Ako získať kľúč Google Gemini API
 
-Pre použitie tejto akcie potrebujete bezplatný API kľúč z Google AI Studio:
+Ak chcete použiť túto akciu, potrebujete bezplatný kľúč API od Google AI Studio:
 
-1. Prejdite na [Google AI Studio](https://aistudio.google.com/).
+1. Prejdite do [Google AI Studio](https://aistudio.google.com/).
 2. Prihláste sa pomocou svojho účtu Google.
 3. V ľavom navigačnom menu kliknite na **Get API key**.
 4. Kliknite na tlačidlo **Create API key**.
 5. Skopírujte vygenerovaný kľúč.
-6. Prejdite do svojho repozitára na GitHub-e -> **Settings** -> **Secrets and variables** -> **Actions**.
-7. Kliknite na **New repository secret**, pomenujte ho `GEMINI_API_KEY`, vložte svoj kľúč do poľa Secret a uložte.
+6. Prejdite do svojho repozitára na GitHube -> **Settings** -> **Secrets and variables** -> **Actions**.
+7. Kliknite na **New repository secret**, pomenujte ho `GEMINI_API_KEY`, vložte váš kľúč do poľa Secret a uložte.
 
-## 🔑 Ako nakonfigurovať štandardný GitHub Token
+## 🔑 Ako nakonfigurovať Štandardný GitHub Token
 
-Táto akcia používa vstavaný `GITHUB_TOKEN` na nahrávanie (push) commitov alebo vytváranie Pull Requestov. **Nemusíte** ručne vytvárať Personal Access Token (PAT), ale **musíte** zabezpečiť, aby mal predvolený token správne oprávnenia:
+Táto akcia používa vstavaný `GITHUB_TOKEN` na nahrávanie (push) commitov. Nepotrebujete manuálne vytvárať Personal Access Token (PAT), ale musíte zabezpečiť, aby mal predvolený token správne oprávnenia:
 
-1. Prejdite v repozitári do **Settings** -> **Actions** -> **General**.
+1. Prejdite do **Settings** -> **Actions** -> **General** vo vašom repozitári.
 2. Prejdite nižšie na sekciu **Workflow permissions**.
 3. Vyberte **Read and write permissions**.
 4. Kliknite na **Save**.
-5. Vo vašom YAML súbore pre workflow jednoducho odovzdajte `${{ secrets.GITHUB_TOKEN }}` vstupu `github_token` (ako je ukázané v príklade použitia).
+5. Vo vašom YAML súbore pracovného postupu (workflow) jednoducho priraďte `${{ secrets.GITHUB_TOKEN }}` vstupu `github_token` (ako je znázornené v príklade použitia).
 
 ## 📄 Licencia
 
-Tento projekt je licencovaný pod MIT licenciou - pozrite si súbor [LICENSE](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE) pre viac podrobností.
+Tento projekt je licencovaný pod MIT licenciou - pre viac podrobností si pozrite súbor [LICENSE](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE).

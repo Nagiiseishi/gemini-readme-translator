@@ -1,4 +1,4 @@
-> 🌐 **Languages:** [English](README.md) | [English (en)](translations/README.en.md) | [Русский](translations/README.ru.md) | [ไทย](translations/README.th.md) | [简体中文](translations/README.zh-CN.md) | [繁體中文](translations/README.zh-TW.md) | [हिन्दी](translations/README.hi.md) | [Español](translations/README.es.md) | [Français](translations/README.fr.md) | [العربية](translations/README.ar.md) | [বাংলা](translations/README.bn.md) | [Português](translations/README.pt.md) | [اردو](translations/README.ur.md) | [Bahasa Indonesia](translations/README.id.md) | [Deutsch](translations/README.de.md) | [日本語](translations/README.ja.md) | [मराठी](translations/README.mr.md) | [తెలుగు](translations/README.te.md) | [Türkçe](translations/README.tr.md) | [தமிழ்](translations/README.ta.md) | [Tiếng Việt](translations/README.vi.md) | [한국어](translations/README.ko.md) | [Kiswahili](translations/README.sw.md) | [Italiano](translations/README.it.md) | [ગુજરાતી](translations/README.gu.md) | [فارسی](translations/README.fa.md) | [ಕನ್ನಡ](translations/README.kn.md) | [Polski](translations/README.pl.md) | [മലയാളം](translations/README.ml.md) | [Українська](translations/README.uk.md) | [Română](translations/README.ro.md) | [Nederlands](translations/README.nl.md) | [Ελληνικά](translations/README.el.md) | [Magyar](translations/README.hu.md) | [Svenska](translations/README.sv.md) | [Čeština](translations/README.cs.md) | [Српски](translations/README.sr.md) | [עברית](translations/README.he.md) | [Български](translations/README.bg.md) | [Dansk](translations/README.da.md) | [Suomi](translations/README.fi.md) | [Norsk](translations/README.no.md) | [Slovenčina](translations/README.sk.md) | [Hrvatski](translations/README.hr.md) | [Lietuvių](translations/README.lt.md) | [Slovenščina](translations/README.sl.md) | [Latviešu](translations/README.lv.md) | [Eesti](translations/README.et.md)
+> 🌐 **Languages:** [English](../README.md) | [Русский](README.ru.md) | [ไทย](README.th.md) | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [हिन्दी](README.hi.md) | [Español](README.es.md) | [Français](README.fr.md) | [العربية](README.ar.md) | [বাংলা](README.bn.md) | [Português](README.pt.md) | [اردو](README.ur.md) | [Bahasa Indonesia](README.id.md) | [Deutsch](README.de.md) | [日本語](README.ja.md) | [मराठी](README.mr.md) | [తెలుగు](README.te.md) | [Türkçe](README.tr.md) | [தமிழ்](README.ta.md) | [Tiếng Việt](README.vi.md) | [한국어](README.ko.md) | [Kiswahili](README.sw.md) | [Italiano](README.it.md) | [ગુજરાતી](README.gu.md) | [فارسی](README.fa.md) | [ಕನ್ನಡ](README.kn.md) | [Polski](README.pl.md) | [മലയാളം](README.ml.md) | [Українська](README.uk.md) | [Română](README.ro.md) | [Nederlands](README.nl.md) | [Ελληνικά](README.el.md) | [Magyar](README.hu.md) | [Svenska](README.sv.md) | [Čeština](README.cs.md) | [Српски](README.sr.md) | [עברית](README.he.md) | [Български](README.bg.md) | [Dansk](README.da.md) | [Suomi](README.fi.md) | [Norsk](README.no.md) | [Slovenčina](README.sk.md) | [Hrvatski](README.hr.md) | [Lietuvių](README.lt.md) | [Slovenščina](README.sl.md) | [Latviešu](README.lv.md) | [Eesti](README.et.md)
 
 # Gemini README Translator
 
@@ -6,13 +6,13 @@
 [![codecov](https://codecov.io/gh/artryazanov/gemini-readme-translator/graph/badge.svg)](https://codecov.io/gh/artryazanov/gemini-readme-translator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-GitHub Action, joka kääntää `README.md`-tiedostosi automaattisesti useille kielille Gemini API:n avulla. Se lisää älykkäästi ristiinlinkitetyn kielivalikon kaikkiin tiedostoihin ja voi joko viedä muutokset (commit) suoraan tai luoda Pull Request -pyynnön tarkistettavaksi.
+GitHub Action, joka kääntää `README.md`-tiedostosi automaattisesti useille kielille käyttämällä Gemini API:a. Se lisää älykkäästi ristiinlinkitetyn kielenvalintavalikon kaikkiin tiedostoihin ja vahvistaa (commit) muutokset automaattisesti.
 
 ## 🚀 Ominaisuudet
 * **Monikielinen tuki:** Luo README-tiedostot useille kielille yhdellä ajolla.
-* **Automaattinen navigointi:** Lisää ja ylläpitää automaattisesti vakiomuotoista kielivalikkoa tiedostojen yläosassa (voidaan poistaa käytöstä). Tekoäly tyylittelee sen automaattisesti!
-* **Mukautettava tyyli:** Voit antaa mukautetun valikkotyyliparametrin, jotta tekoäly muotoilee kielivalikon juuri haluamallasi tavalla.
-* **Tokenien seuranta:** Tulostaa Geminin tokenien käyttötilastot.
+* **Automaattinen navigointi:** Lisää ja ylläpitää automaattisesti vakioidun kielenvalintavalikon tiedostojesi yläosassa (voidaan poistaa käytöstä). Tekoäly tyylittelee sen automaattisesti!
+* **Mukautettu tyylittely:** Voit antaa mukautetun valikkotyyliparametrin, jolloin tekoäly muotoilee kielenvalitsimen juuri haluamallasi tavalla.
+* **Tokenien seuranta:** Tulostaa Geminin token-käyttötilastot.
 
 ## 🛠 Käyttö
 
@@ -32,11 +32,13 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Gemini README Translator
+        id: translator
         uses: artryazanov/gemini-readme-translator@v1
         with:
           api_key: ${{ secrets.GEMINI_API_KEY }}
@@ -45,44 +47,60 @@ jobs:
           add_language_menu: 'true'
           menu_style: '> 🌐 **Languages:** [English](README.md) | [Русский](README.ru.md)'
 
+      - name: Print Translation Stats
+        run: |
+          echo "Process took ${{ steps.translator.outputs.duration_seconds }} seconds."
+          echo "Total tokens used: ${{ steps.translator.outputs.total_tokens_used }}"
+          echo "Input tokens: ${{ steps.translator.outputs.input_tokens_used }}"
+          echo "Output tokens: ${{ steps.translator.outputs.output_tokens_used }}"
+
 ```
 
 ## 📥 Syötteet
 
 | Syöte | Pakollinen | Oletus | Kuvaus |
 | --- | --- | --- | --- |
-| `api_key` | Kyllä |  | Google Gemini API -avaimesi. |
-| `github_token` | Kyllä |  | Vakio-GitHub-tunnus (`${{ secrets.GITHUB_TOKEN }}`). |
-| `languages` | Kyllä |  | Pilkulla erotetut kohdekielet (esim. `ru, es`). |
-| `output_dir` | Ei | | Hakemisto, johon käännetyt tiedostot tallennetaan. Oletuksena lähdetiedoston hakemisto. |
+| `api_key` | Kyllä |  | Google Gemini API -avain. |
+| `github_token` | Kyllä |  | Vakio GitHub-token (`${{ secrets.GITHUB_TOKEN }}`). |
+| `languages` | Kyllä |  | Pilkuilla erotetut kohdekielet (esim. `ru, es`). |
+| `output_dir` | Ei | | Hakemisto käännettyjen tiedostojen tallentamiseen. Oletuksena lähdetiedoston hakemisto. |
 | `add_language_menu` | Ei | `true` | Aseta arvoon `false` poistaaksesi kielivalikon automaattisen luonnin käytöstä. |
 | `menu_style` | Ei | `> 🌐 **Languages:** [English](README.md) \| [Русский](README.ru.md)` | Viitetyyli, jota tekoäly käyttää luodessaan uutta kielivalikkoa. |
-| `commit_message` | Ei | `docs: auto-translate README via Gemini` | Git-kommitin viestinä käytettävä teksti. |
+| `commit_message` | Ei | `docs: auto-translate README via Gemini` | Git-vahvistusviestissä (commit) käytettävä teksti. |
 | `model` | Ei | `gemini-3.1-pro-preview` | Käytettävä Gemini-malli. |
 | `source_file` | Ei | `README.md` | Käännettävä perustiedosto. |
 
-## 🔑 Miten saada Google Gemini API -avain
+## 📤 Tulosteet
 
-Tämän toiminnon käyttämiseksi tarvitset ilmaisen API-avaimen Google AI Studiolta:
+| Tuloste | Kuvaus |
+| --- | --- |
+| `total_tokens_used` | Käsiteltyjen tokenien kokonaismäärä. |
+| `input_tokens_used` | Syötekyselyissä käytettyjen tokenien määrä. |
+| `output_tokens_used` | Vastauksissa luotujen tokenien määrä. |
+| `duration_seconds` | Käsittelyn kokonaisaika sekunteina. |
 
-1. Siirry osoitteeseen [Google AI Studio](https://aistudio.google.com/).
+## 🔑 Kuinka saada Google Gemini API -avain
+
+Tämän toiminnon käyttämiseksi tarvitset ilmaisen API-avaimen Google AI Studiosta:
+
+1. Mene osoitteeseen [Google AI Studio](https://aistudio.google.com/).
 2. Kirjaudu sisään Google-tililläsi.
-3. Napsauta vasemmassa navigointivalikossa **Get API key**.
+3. Napsauta vasemmasta navigointivalikosta **Get API key**.
 4. Napsauta **Create API key** -painiketta.
 5. Kopioi luotu avain.
-6. Siirry GitHub-repositoriosi kohtaan **Settings** -> **Secrets and variables** -> **Actions**.
+6. Siirry GitHub-arkistoosi -> **Settings** -> **Secrets and variables** -> **Actions**.
 7. Napsauta **New repository secret**, nimeä se `GEMINI_API_KEY`, liitä avaimesi Secret-kenttään ja tallenna.
 
-## 🔑 Vakio-GitHub-tunnuksen (GITHUB_TOKEN) määrittäminen
+## 🔑 Kuinka määrittää vakio GitHub-token
 
-Tämä toiminto käyttää sisäänrakennettua `GITHUB_TOKEN`-tunnusta muutosten viemiseen (push) tai Pull Request -pyyntöjen luomiseen. Sinun **ei** tarvitse luoda henkilökohtaista käyttöoikeustunnusta (Personal Access Token, PAT) manuaalisesti, mutta sinun **täytyy** varmistaa, että oletustunnuksella on oikeat käyttöoikeudet:
+Tämä toiminto käyttää sisäänrakennettua `GITHUB_TOKEN`ia commit-vahvistusten puskemiseen. Sinun **ei** tarvitse luoda henkilökohtaista käyttöoikeustunnusta (PAT) manuaalisesti, mutta sinun **täytyy** varmistaa, että oletustokenilla on oikeat käyttöoikeudet:
 
-1. Siirry repositoriosi kohtaan **Settings** -> **Actions** -> **General**.
+1. Siirry arkistosi kohtaan **Settings** -> **Actions** -> **General**.
 2. Vieritä alas kohtaan **Workflow permissions**.
 3. Valitse **Read and write permissions**.
 4. Napsauta **Save**.
-5. Välitä työnkulun YAML-tiedostossa pelkkä `${{ secrets.GITHUB_TOKEN }}` `github_token`-syötteelle (kuten käyttöesimerkissä on näytetty).
+5. Välitä työnkulkusi YAML-tiedostossa yksinkertaisesti `${{ secrets.GITHUB_TOKEN }}` `github_token`-syötteelle (kuten käyttöesimerkissä on esitetty).
 
 ## 📄 Lisenssi
 
-Tämä projekti on lisensoitu MIT-lisenssillä - katso lisätietoja tiedostosta [LICENSE](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE).
+Tämä projekti on lisensoitu MIT-lisenssillä – katso lisätietoja [LICENSE](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE)-tiedostosta.
