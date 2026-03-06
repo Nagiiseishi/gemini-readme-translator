@@ -6,18 +6,17 @@
 [![codecov](https://codecov.io/gh/artryazanov/gemini-readme-translator/graph/badge.svg)](https://codecov.io/gh/artryazanov/gemini-readme-translator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-A GitHub Action that automatically translates your `README.md` into multiple languages using the Gemini API. It intelligently injects a cross-linked language navigation menu into all files and can either commit changes directly or create a Pull Request for review.
+En GitHub Action, der automatisk oversætter din `README.md` til flere sprog ved hjælp af Gemini API'en. Den indlejrer intelligent en krydslinket sprognavigationsmenu i alle filer og kan enten foretage commits direkte eller oprette en Pull Request til gennemsyn.
 
-## 🚀 Features
-* **Multi-Language Support:** Generate READMEs for multiple languages in one run.
-* **Auto-Navigation:** Automatically inserts and maintains a standard language switcher menu at the top of your files (can be disabled). AI styles it automatically!
-* **Custom Styling:** You can provide a custom menu style parameter so the AI formats the language switcher exactly how you want.
+## 🚀 Funktioner
+* **Flersproget understøttelse:** Generer README'er på flere sprog i en enkelt kørsel.
+* **Auto-navigation:** Indsætter og vedligeholder automatisk en standard sprogskiftermenu øverst i dine filer (kan deaktiveres). AI styler det automatisk!
+* **Brugerdefineret styling:** Du kan angive en brugerdefineret parameter til menustilen, så AI'en formaterer sprogskifteren præcis, som du ønsker det.
+* **Token-sporing:** Viser statistik for Gemini token-forbrug.
 
-* **Token Tracking:** Outputs Gemini token usage statistics.
+## 🛠 Brug
 
-## 🛠 Usage
-
-Create a workflow file (e.g., `.github/workflows/translate.yml`):
+Opret en workflow-fil (f.eks. `.github/workflows/translate.yml`):
 
 ```yaml
 name: Auto Translate README
@@ -46,45 +45,44 @@ jobs:
           add_language_menu: 'true'
           menu_style: '> 🌐 **Languages:** [English](README.md) | [Русский](README.ru.md)'
 
-
 ```
 
-## 📥 Inputs
+## 📥 Input
 
-| Input | Required | Default | Description |
+| Input | Påkrævet | Standard | Beskrivelse |
 | --- | --- | --- | --- |
-| `api_key` | Yes |  | Your Google Gemini API Key. |
-| `github_token` | Yes |  | Standard GitHub token (`${{ secrets.GITHUB_TOKEN }}`). |
-| `languages` | Yes |  | Comma-separated target languages (e.g. `ru, es`). |
-| `output_dir` | No | | Directory to save translated files. Defaults to source file's directory. |
-| `add_language_menu` | No | `true` | Set to `false` to disable auto-generation of the language menu. |
-| `menu_style` | No | `> 🌐 **Languages:** [English](README.md) \| [Русский](README.ru.md)` | The reference style AI uses when generating a new language menu. |
-| `commit_message` | No | `docs: auto-translate README via Gemini` | Text used for the git commit message. |
-| `model` | No | `gemini-3.1-pro-preview` | The Gemini model to use. |
-| `source_file` | No | `README.md` | The base file to translate. |
+| `api_key` | Ja |  | Din Google Gemini API-nøgle. |
+| `github_token` | Ja |  | Standard GitHub-token (`${{ secrets.GITHUB_TOKEN }}`). |
+| `languages` | Ja |  | Kommaadskilte målsprog (f.eks. `ru, es`). |
+| `output_dir` | Nej | | Mappe til at gemme de oversatte filer. Som standard kildefilens mappe. |
+| `add_language_menu` | Nej | `true` | Sæt til `false` for at deaktivere automatisk generering af sprogmenuen. |
+| `menu_style` | Nej | `> 🌐 **Languages:** [English](README.md) \| [Русский](README.ru.md)` | Referencestilen, som AI'en bruger, når den genererer en ny sprogmenu. |
+| `commit_message` | Nej | `docs: auto-translate README via Gemini` | Tekst der bruges til git commit-beskeden. |
+| `model` | Nej | `gemini-3.1-pro-preview` | Den Gemini-model der skal bruges. |
+| `source_file` | Nej | `README.md` | Basisfilen der skal oversættes. |
 
-## 🔑 How to get a Google Gemini API Key
+## 🔑 Sådan får du en Google Gemini API-nøgle
 
-To use this action, you need a free API key from Google AI Studio:
+For at bruge denne action, skal du have en gratis API-nøgle fra Google AI Studio:
 
-1. Go to [Google AI Studio](https://aistudio.google.com/).
-2. Sign in with your Google account.
-3. In the left navigation menu, click on **Get API key**.
-4. Click the **Create API key** button.
-5. Copy the generated key.
-6. Go to your GitHub repository -> **Settings** -> **Secrets and variables** -> **Actions**.
-7. Click **New repository secret**, name it `GEMINI_API_KEY`, paste your key into the Secret field, and save.
+1. Gå til [Google AI Studio](https://aistudio.google.com/).
+2. Log ind med din Google-konto.
+3. I den venstre navigationsmenu, klik på **Get API key**.
+4. Klik på knappen **Create API key**.
+5. Kopiér den genererede nøgle.
+6. Gå til dit GitHub-repository -> **Settings** -> **Secrets and variables** -> **Actions**.
+7. Klik på **New repository secret**, navngiv den `GEMINI_API_KEY`, indsæt din nøgle i Secret-feltet, og gem.
 
-## 🔑 How to configure the Standard GitHub Token
+## 🔑 Sådan konfigureres standard GitHub-tokenet
 
-This action uses the built-in `GITHUB_TOKEN` to push commits or create Pull Requests. You **do not** need to create a Personal Access Token (PAT) manually, but you **must** ensure the default token has the correct permissions:
+Denne action bruger det indbyggede `GITHUB_TOKEN` til at pushe commits eller oprette Pull Requests. Du behøver **ikke** at oprette et Personal Access Token (PAT) manuelt, men du **skal** sikre dig, at standardtokenet har de korrekte tilladelser:
 
-1. Go to your repository **Settings** -> **Actions** -> **General**.
-2. Scroll down to the **Workflow permissions** section.
-3. Select **Read and write permissions**.
-4. Click **Save**.
-5. In your workflow YAML, simply pass `${{ secrets.GITHUB_TOKEN }}` to the `github_token` input (as shown in the usage example).
+1. Gå til dit repositorys **Settings** -> **Actions** -> **General**.
+2. Rul ned til afsnittet **Workflow permissions**.
+3. Vælg **Read and write permissions**.
+4. Klik på **Save**.
+5. I din workflow YAML skal du blot videregive `${{ secrets.GITHUB_TOKEN }}` til `github_token` inputtet (som vist i brugseksemplet).
 
-## 📄 License
+## 📄 Licens
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE) file for details.
+Dette projekt er licenseret under MIT-licensen - se filen [LICENSE](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE) for detaljer.

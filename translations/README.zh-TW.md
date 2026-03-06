@@ -6,18 +6,17 @@
 [![codecov](https://codecov.io/gh/artryazanov/gemini-readme-translator/graph/badge.svg)](https://codecov.io/gh/artryazanov/gemini-readme-translator)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-A GitHub Action that automatically translates your `README.md` into multiple languages using the Gemini API. It intelligently injects a cross-linked language navigation menu into all files and can either commit changes directly or create a Pull Request for review.
+這是一個 GitHub Action，能使用 Gemini API 自動將您的 `README.md` 翻譯成多種語言。它會智慧地在所有檔案中插入互相連結的語言導覽選單，並可以直接提交 (commit) 變更或建立 Pull Request 以供審閱。
 
-## 🚀 Features
-* **Multi-Language Support:** Generate READMEs for multiple languages in one run.
-* **Auto-Navigation:** Automatically inserts and maintains a standard language switcher menu at the top of your files (can be disabled). AI styles it automatically!
-* **Custom Styling:** You can provide a custom menu style parameter so the AI formats the language switcher exactly how you want.
+## 🚀 功能特色
+* **多語言支援：** 一次執行即可產生多種語言的 README 檔案。
+* **自動導覽：** 自動在您的檔案頂部插入並維護標準的語言切換選單（可停用）。AI 會自動為其設定樣式！
+* **自訂樣式：** 您可以提供自訂的選單樣式參數，讓 AI 完全按照您的需求來格式化語言切換器。
+* **Token 追蹤：** 輸出 Gemini token 的使用量統計資訊。
 
-* **Token Tracking:** Outputs Gemini token usage statistics.
+## 🛠 使用方式
 
-## 🛠 Usage
-
-Create a workflow file (e.g., `.github/workflows/translate.yml`):
+建立一個工作流程檔案（例如：`.github/workflows/translate.yml`）：
 
 ```yaml
 name: Auto Translate README
@@ -49,42 +48,42 @@ jobs:
 
 ```
 
-## 📥 Inputs
+## 📥 輸入參數
 
-| Input | Required | Default | Description |
+| 參數 | 必填 | 預設值 | 說明 |
 | --- | --- | --- | --- |
-| `api_key` | Yes |  | Your Google Gemini API Key. |
-| `github_token` | Yes |  | Standard GitHub token (`${{ secrets.GITHUB_TOKEN }}`). |
-| `languages` | Yes |  | Comma-separated target languages (e.g. `ru, es`). |
-| `output_dir` | No | | Directory to save translated files. Defaults to source file's directory. |
-| `add_language_menu` | No | `true` | Set to `false` to disable auto-generation of the language menu. |
-| `menu_style` | No | `> 🌐 **Languages:** [English](README.md) \| [Русский](README.ru.md)` | The reference style AI uses when generating a new language menu. |
-| `commit_message` | No | `docs: auto-translate README via Gemini` | Text used for the git commit message. |
-| `model` | No | `gemini-3.1-pro-preview` | The Gemini model to use. |
-| `source_file` | No | `README.md` | The base file to translate. |
+| `api_key` | 是 |  | 您的 Google Gemini API 金鑰。 |
+| `github_token` | 是 |  | 標準的 GitHub token (`${{ secrets.GITHUB_TOKEN }}`)。 |
+| `languages` | 是 |  | 以逗號分隔的目標語言（例如：`ru, es`）。 |
+| `output_dir` | 否 | | 儲存翻譯檔案的目錄。預設為來源檔案的所在目錄。 |
+| `add_language_menu` | 否 | `true` | 設為 `false` 可停用自動產生語言選單。 |
+| `menu_style` | 否 | `> 🌐 **Languages:** [English](README.md) \| [Русский](README.ru.md)` | AI 在產生新語言選單時使用的參考樣式。 |
+| `commit_message` | 否 | `docs: auto-translate README via Gemini` | 用於 Git 提交 (commit) 訊息的文字。 |
+| `model` | 否 | `gemini-3.1-pro-preview` | 要使用的 Gemini 模型。 |
+| `source_file` | 否 | `README.md` | 要翻譯的基礎來源檔案。 |
 
-## 🔑 How to get a Google Gemini API Key
+## 🔑 如何取得 Google Gemini API 金鑰
 
-To use this action, you need a free API key from Google AI Studio:
+要使用此 Action，您需要從 Google AI Studio 取得免費的 API 金鑰：
 
-1. Go to [Google AI Studio](https://aistudio.google.com/).
-2. Sign in with your Google account.
-3. In the left navigation menu, click on **Get API key**.
-4. Click the **Create API key** button.
-5. Copy the generated key.
-6. Go to your GitHub repository -> **Settings** -> **Secrets and variables** -> **Actions**.
-7. Click **New repository secret**, name it `GEMINI_API_KEY`, paste your key into the Secret field, and save.
+1. 前往 [Google AI Studio](https://aistudio.google.com/)。
+2. 使用您的 Google 帳號登入。
+3. 在左側導覽選單中，點擊 **Get API key**。
+4. 點擊 **Create API key** 按鈕。
+5. 複製產生的金鑰。
+6. 前往您的 GitHub 儲存庫 -> **Settings** -> **Secrets and variables** -> **Actions**。
+7. 點擊 **New repository secret**，命名為 `GEMINI_API_KEY`，將您的金鑰貼到 Secret 欄位中，然後儲存。
 
-## 🔑 How to configure the Standard GitHub Token
+## 🔑 如何設定標準 GitHub Token
 
-This action uses the built-in `GITHUB_TOKEN` to push commits or create Pull Requests. You **do not** need to create a Personal Access Token (PAT) manually, but you **must** ensure the default token has the correct permissions:
+此 Action 使用內建的 `GITHUB_TOKEN` 來推送提交 (commit) 或建立 Pull Request。您**不需要**手動建立個人存取權杖 (PAT)，但您**必須**確保預設 Token 具有正確的權限：
 
-1. Go to your repository **Settings** -> **Actions** -> **General**.
-2. Scroll down to the **Workflow permissions** section.
-3. Select **Read and write permissions**.
-4. Click **Save**.
-5. In your workflow YAML, simply pass `${{ secrets.GITHUB_TOKEN }}` to the `github_token` input (as shown in the usage example).
+1. 前往您儲存庫的 **Settings** -> **Actions** -> **General**。
+2. 向下捲動到 **Workflow permissions** 區塊。
+3. 選擇 **Read and write permissions**。
+4. 點擊 **Save**。
+5. 在您的工作流程 YAML 檔案中，只需將 `${{ secrets.GITHUB_TOKEN }}` 傳遞給 `github_token` 參數即可（如使用方式範例所示）。
 
-## 📄 License
+## 📄 授權條款
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE) file for details.
+本專案採用 MIT 授權條款 - 詳情請參閱 [LICENSE](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE) 檔案。
