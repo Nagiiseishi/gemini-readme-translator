@@ -57,7 +57,6 @@ jobs:
 | `output_dir` | No | | Directory to save translated files. Defaults to source file's directory. |
 | `add_language_menu` | No | `true` | Set to `false` to disable auto-generation of the language menu. |
 | `menu_style` | No | `> 🌐 **Languages:** [English](README.md) \| [Русский](README.ru.md)` | The reference style AI uses when generating a new language menu. |
-
 | `commit_message` | No | `docs: auto-translate README via Gemini` | Text used for the git commit message. |
 | `model` | No | `gemini-3.1-pro-preview` | The Gemini model to use. |
 | `source_file` | No | `README.md` | The base file to translate. |
