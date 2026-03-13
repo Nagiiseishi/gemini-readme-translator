@@ -74,7 +74,7 @@ jobs:
           echo "Files exist. Checking content..."
           cat TEST_README.ru.md
           
-          echo "\nChecking GitHub output variables..."
+          printf "\nChecking GitHub output variables...\n"
           echo "Duration: ${{ steps.translator.outputs.duration_seconds }} s"
           echo "Total Tokens: ${{ steps.translator.outputs.total_tokens_used }}"
           
@@ -82,7 +82,7 @@ jobs:
             echo "::error::total_tokens_used is empty!"
             exit 1
           fi
-          if [ "${{ steps.translator.outputs.total_tokens_used }}" -eq "0" ]; then
+          if [ "${{ steps.translator.outputs.total_tokens_used }}" = "0" ]; then
             echo "::error::total_tokens_used is 0, which suggests API call failed or stats weren't parsed."
             exit 1
           fi
