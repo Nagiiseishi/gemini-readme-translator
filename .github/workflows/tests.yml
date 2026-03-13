@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Run Tests and E2E
 
 on:
   push:
@@ -29,10 +29,6 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -r requirements-dev.txt
-
-      - name: Lint Code with Ruff
-        run: |
-          ruff check .
 
       - name: Run Unit Tests
         run: |
